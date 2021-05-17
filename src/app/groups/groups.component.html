@@ -1,1 +1,15 @@
-<p>groups works!</p>
+<div *ngIf="lists">
+  <h4>All Lists</h4>
+  <ul>
+    <li *ngFor="let list of lists">
+      {{list.name}} -- {{list.description}}
+      <button (click)="deleteList(list)">delete</button>
+    </li>
+  </ul>
+</div>
+<h4>Create New List</h4>
+<form (submit)="createList()">
+  <input [(ngModel)]="listName" name="listName" type="text" placeholder="name" />
+  <input [(ngModel)]="listDescription" name="listDescription" type="text" placeholder="description" />
+  <input type="submit"/>
+</form>
