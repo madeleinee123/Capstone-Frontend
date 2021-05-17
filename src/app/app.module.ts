@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { GroupComponent } from './group/group.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     AboutComponent,
-    GroupComponent
+    GroupComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

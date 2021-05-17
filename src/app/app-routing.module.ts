@@ -5,6 +5,7 @@ import {GroupsComponent} from './groups/groups.component';
 import {LoginComponent} from './login/login.component';
 import {AboutComponent} from './about/about.component';
 import {GroupComponent} from './group/group.component';
+import {LogoutComponent} from './logout/logout.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent
   }
 ];
 

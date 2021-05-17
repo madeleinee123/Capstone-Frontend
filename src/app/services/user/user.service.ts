@@ -1,29 +1,44 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Subject} from "rxjs";
+import {Router} from "@angular/router";
 
 const herokuUrl = 'http://localhost:9092';
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  currentUser: string;
+  searchSubject = new Subject();
 
-  constructor(private http: HttpClient) { console.log('user service loaded'); }
+  constructor(private http: HttpClient, private router: Router) { console.log('user service loaded'); }
 
-  registerUser(newUser) {
+  registerUser(newUser): any {
     console.log(newUser);
     return this.http
-      .post(`${herokuUrl}/auth/users/register`, newUser);
+      .post(`${herokuUrl}/auth/users/register`, newUser)
+      .subscribe(response => console.log(response));
   }
   loginUser(user): void {
     console.log(user);
+
     this.http
       .post(`${herokuUrl}/auth/users/login`, user)
       .subscribe(response => {
-        // tslint:disable-next-line:no-string-literal
         const token = response['jwt'];
         localStorage.setItem('currentUser', `${user.email}`);
         localStorage.setItem('token', `${token}`);
         console.log(response, token);
+        this.currentUser = user.email;
+        this.searchSubject.next(this.currentUser);
+        this.router.navigate(['/groups']);
       }, err => console.log(err));
+  }
+  logoutUser(): void {
+    localStorage.removeItem('currentUser');
+    localStorage.removeItem('token');
+    this.currentUser = null;
+    this.searchSubject.next(this.currentUser);
+    this.router.navigate(['/login']);
   }
 }
