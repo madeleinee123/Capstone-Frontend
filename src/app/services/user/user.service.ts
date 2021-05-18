@@ -35,7 +35,7 @@ export class UserService {
         console.log(response, token);
         this.currentUser = user.email;
         this.searchSubject.next(this.currentUser);
-        this.router.navigate(['/groups']);
+        this.router.navigate(['/lists']);
       }, err => console.log(err));
   }
   logoutUser(): void {

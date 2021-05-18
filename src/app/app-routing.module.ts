@@ -13,14 +13,12 @@ const routes: Routes = [
     component: SignupComponent
   },
   {
-    path: 'groups',
+    path: 'lists',
     component: GroupsComponent,
-    children: [
-      {
-        path: ':id',
-        component: GroupComponent
-      }
-    ]
+  },
+  {
+    path: 'lists/:id',
+    component: GroupComponent
   },
   {
     path: 'login',

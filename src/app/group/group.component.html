@@ -1,1 +1,14 @@
-<p>group works!</p>
+<div *ngIf="group">
+  <h4>{{group.name}}</h4>
+  <p>{{group.description}}</p>
+  <form (submit)="createTask()">
+    <input [(ngModel)]="taskName" name="taskName" type="text" placeholder="new task" />
+    <input type="submit"/>
+  </form>
+  <ul>
+    <li *ngFor="let task of group.taskList">
+      {{task.name}}
+      <button (click)="deleteTask(task)">delete</button>
+    </li>
+  </ul>
+</div>
