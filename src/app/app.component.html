@@ -2,18 +2,18 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" routerLink="/login"><img src="assets/logo.png" alt="logo: world whelmed with a tiny pink heart"></a>
-      <a routerLink="/home">Home</a>
-      <a routerLink="/about">About</a>
+      <a routerLink="/" class="rounded-pill">Home</a>
+      <a routerLink="/about" class="rounded-pill">About</a>
     </div>
       <ul class="nav navbar-nav navbar-right">
 
         <span *ngIf="!this.currentUser">
-          <li><a routerLink="/signup">Sign Up</a></li>
-          <li><a routerLink="/login">Log In</a></li>
+          <li><a routerLink="/signup" class="rounded-pill">Sign Up</a></li>
+          <li><a routerLink="/login" class="rounded-pill">Log In</a></li>
         </span>
         <span *ngIf="this.currentUser">
-          <li><a routerLink="/lists">All Lists</a></li>
-          <li><a routerLink="/logout">Log Out</a></li>
+          <li><a routerLink="/lists" class="rounded-pill">All Lists</a></li>
+          <li><a routerLink="/logout" class="rounded-pill">Log Out</a></li>
           <li><p class="navbar-text">Hello, {{this.currentUser}}</p></li>
         </span>
       </ul>
