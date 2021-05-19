@@ -15,10 +15,8 @@ a{
 a:hover{
   background-color: #f8e16c;
   color: #fb8f67;
-  border: 10px;
 }
 p{
-
   font-size: 1.5vw;
 }
 #hello{

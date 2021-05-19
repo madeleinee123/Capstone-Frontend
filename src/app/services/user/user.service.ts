@@ -18,8 +18,8 @@ export class UserService {
   registerUser(newUser): any {
     console.log(newUser);
     return this.http
-      .post(`${herokuUrl}/auth/users/register`, newUser)
-      .subscribe(response => console.log(response));
+      .post(`${herokuUrl}/auth/users/register`, newUser, this.httpOptions)
+      //.subscribe(response => console.log(response));
   }
   loginUser(user): void {
     console.log(user);
