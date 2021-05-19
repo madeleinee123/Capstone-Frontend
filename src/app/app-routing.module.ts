@@ -6,6 +6,7 @@ import {LoginComponent} from './login/login.component';
 import {AboutComponent} from './about/about.component';
 import {GroupComponent} from './group/group.component';
 import {LogoutComponent} from './logout/logout.component';
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'logout',
     component: LogoutComponent
+  },
+  {
+    path: '',
+    component: HomeComponent
   }
 ];
 
