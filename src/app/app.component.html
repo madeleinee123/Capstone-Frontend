@@ -1,12 +1,11 @@
 <nav class="navbar navbar-default navbar-fixed-top shadow-lg">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" routerLink="/login"><img src="assets/logo.png" alt="logo: world whelmed with a tiny pink heart"></a>
+      <a class="navbar-brand" routerLink="/"><img src="assets/logo.png" alt="logo: world whelmed with a tiny pink heart"></a>
       <a routerLink="/" class="rounded-pill">Home</a>
       <a routerLink="/about" class="rounded-pill">About</a>
     </div>
       <ul class="nav navbar-nav navbar-right">
-
         <span *ngIf="!this.currentUser">
           <li><a routerLink="/signup" class="rounded-pill">Sign Up</a></li>
           <li><a routerLink="/login" class="rounded-pill">Log In</a></li>

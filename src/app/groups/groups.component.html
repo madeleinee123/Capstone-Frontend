@@ -1,15 +1,29 @@
-<div *ngIf="lists">
-  <h4>All Lists</h4>
-  <ul>
-    <li *ngFor="let list of lists">
-      <a routerLink = "{{list.id}}">{{list.name}} -- {{list.description}}</a>
-      <button (click)="deleteList(list)">delete</button>
-    </li>
-  </ul>
+<div id="body">
+  <h2 class="shadow">All Lists</h2>
+  <div id="lists">
+    <div *ngIf="lists">
+      <ul>
+        <div class="card shadow" style="width: 15rem; height: 15rem;" *ngFor="let list of lists">
+          <div class="card-body">
+            <h3 class="card-title shadow"><a routerLink = "{{list.id}}">{{list.name}}</a></h3>
+          </div>
+        </div>
+        <div id="add" class="card shadow" style="width: 15rem; height: 15rem;">
+          <div class="card-body">
+          <h4 class="card-title shadow">Create New List</h4>
+          <form class="form-group card-text" (submit)="createList()">
+            <input [(ngModel)]="listName" name="listName" type="text" placeholder="name" class="form-control shadow" />
+            <input [(ngModel)]="listDescription" name="listDescription" type="text" placeholder="description" class="form-control"/>
+            <div *ngIf="lists.length < 8">
+              <input id="submit" class="rounded-pill" type="submit"/>
+            </div>
+            <div *ngIf="lists.length >= 8">
+              <p class="card-text shadow">More than 8 lists sounds a little overwhelming if you catch my drift ;)</p>
+            </div>
+          </form>
+        </div>
+        </div>
+      </ul>
+    </div>
+  </div>
 </div>
-<h4>Create New List</h4>
-<form (submit)="createList()">
-  <input [(ngModel)]="listName" name="listName" type="text" placeholder="name" />
-  <input [(ngModel)]="listDescription" name="listDescription" type="text" placeholder="description" />
-  <input type="submit"/>
-</form>
