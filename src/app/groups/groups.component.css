@@ -35,7 +35,7 @@ ul{
 .card{
   background-color: #f8e16c;
   border: none;
-  background-image: url("../../assets/list.png");
+  background-image: url("src/assets/images/list.png");
   background-size:  contain;
   background-repeat: no-repeat;
   background-position: center;
