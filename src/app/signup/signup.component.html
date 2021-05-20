@@ -1,12 +1,17 @@
-<div>
-  <form class="form-group">
-    <h2>Sign Up</h2>
-      <label for="exampleInputUsername1">Username</label>
-      <input [(ngModel)]="userName" type="text" name="userName" placeholder="User Name"  class="form-control" id="exampleInputUsername1"/>
-      <label for="exampleInputEmail1">Email address</label>
-      <input [(ngModel)]="emailAddress" type="text" name="emailAddress" placeholder="Email Address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-      <label for="exampleInputPassword1">Password</label>
-      <input [(ngModel)]="password" type="text" name="password" placeholder="Password" class="form-control" id="exampleInputPassword1" />
-      <input class="rounded-pill" (click)="registerUser()" type="submit" value="Register"/>
-  </form>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-5">
+      <form class="form-group col-9 align-items-center">
+        <h2>Sign Up</h2>
+        <label for="exampleInputUsername1">Username</label>
+        <input [(ngModel)]="userName" type="text" name="userName" placeholder="User Name"  class="form-control" id="exampleInputUsername1"/>
+        <label for="exampleInputEmail1">Email address</label>
+        <input [(ngModel)]="emailAddress" type="text" name="emailAddress" placeholder="Email Address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+        <label for="exampleInputPassword1">Password</label>
+        <input [(ngModel)]="password" type="text" name="password" placeholder="Password" class="form-control" id="exampleInputPassword1" />
+        <input class="rounded-pill" (click)="registerUser()" type="submit" value="Register"/>
+      </form>
+    </div>
+    <div class="col-9"></div>
+  </div>
 </div>

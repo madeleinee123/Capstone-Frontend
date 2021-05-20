@@ -1,16 +1,14 @@
-form{
-  height: 80vh;
-  width: 30vw;
+.col-5{
   background-image: url("../../assets/clipboard.png");
-  background-size:  contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  height: 100vh;
+}
+form{
   font-size: 1.5vw;
-  padding: 150px 70px 70px 50px;
+  /*padding: 150px 70px 70px 50px;*/
+
 }
 .rounded-pill{
   background-color: #fb8f67;
@@ -22,10 +20,6 @@ form{
   background-color: #f8e16c;
   color: #fb8f67;
 }
-div{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+.container{
+  height: 100%;
 }

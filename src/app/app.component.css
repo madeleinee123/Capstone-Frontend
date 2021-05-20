@@ -2,27 +2,36 @@
   background-color: #f8e16c;
   font-size: larger;
 }
-.navbar-header{
-  width: 10%;
-}
 img{
   width: 100%;
 }
-a {
+a{
   color: inherit;
   text-decoration: none;
-  padding: 10px;
 }
-li {
-  float: left;
-}
+/*.right, li {*/
+/*  float: left;*/
+/*}*/
 a:hover {
   background-color: #fb8f67;
   color: floralwhite;
 }
 .navbar-brand:hover{
-  background-color: #f8e16c;
+  background-color: transparent;
 }
 #name{
   color: #fb8f67;
+}
+.container{
+  height: 100%;
+}
+@media (min-width: 768px){
+  ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  span{
+    display: inline-flex;
+  }
 }
