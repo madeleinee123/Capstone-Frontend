@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
-const herokuUrl = 'http://localhost:9092';
+const herokuUrl = 'https://whelmed-backend.herokuapp.com';
 @Injectable({
   providedIn: 'root'
 })

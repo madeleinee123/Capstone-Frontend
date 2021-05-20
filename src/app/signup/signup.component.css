@@ -1,11 +1,16 @@
 form{
-  height: 100vh;
-  width: 40vw;
+  height: 80vh;
+  width: 30vw;
+  background-image: url("../../assets/clipboard.png");
+  background-size:  contain;
+  background-repeat: no-repeat;
+  background-position: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   font-size: 1.5vw;
+  padding: 150px 70px 70px 50px;
 }
 .rounded-pill{
   background-color: #fb8f67;
@@ -16,4 +21,11 @@ form{
 .rounded-pill:hover{
   background-color: #f8e16c;
   color: #fb8f67;
+}
+div{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }

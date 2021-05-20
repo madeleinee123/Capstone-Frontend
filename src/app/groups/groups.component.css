@@ -69,7 +69,7 @@ h4{
   margin-top: 50px;
   width:75%;
   background-color: #00c49a;
-  color: #f8e16c;
+  color: #156064;
 }
 p{
   font-size: small;
@@ -80,7 +80,7 @@ p{
 #header{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 }
 img{
