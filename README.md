@@ -10,7 +10,7 @@ create todo lists in a way that is stress free. It requires them to think about 
 them by priority. 
 ## Planning
 To see prior planning, take a look at my <a href="https://github.com/madeleinee123/Capstone-Backend#planning">repo for the backend</a>.
-After completing the backend, I needed to make wireframes for the front end. I made a whole bunch and can be found in WIREFRAMES.md.
+After completing the backend, I needed to make wireframes for the front end. I made a whole bunch and can be found in <a href="https://github.com/madeleinee123/Capstone-Frontend/blob/main/WIREFRAMES.md#wireframes">WIREFRAMES.md</a>.
 
 The next step again was user stories on the trello board. Here's a link to the <a href="https://trello.com/b/9CTWcxxz/frontend">frontend Trello board</a>.
 Now I was ready to rumble.
