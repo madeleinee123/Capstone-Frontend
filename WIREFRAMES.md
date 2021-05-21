@@ -1,17 +1,17 @@
 #WireFrames
 ## About Page
-![](wireframes/about.png)
+![](planning/wireframes/about.png)
 ## Edit Task/List Model
-![](wireframes/Edit.png)
+![](planning/wireframes/Edit.png)
 ## Home Page
-![](wireframes/home.png)
+![](planning/wireframes/home.png)
 ## List Page
-![](wireframes/List.png)
+![](planning/wireframes/List.png)
 ## Lists Page
-![](wireframes/Lists.png)
+![](planning/wireframes/Lists.png)
 ## Login Page
-![](wireframes/Login.png)
+![](planning/wireframes/Login.png)
 ## Sign Up Page
-![](wireframes/SignUP.png)
+![](planning/wireframes/SignUP.png)
 ## New Task Model
-![](wireframes/new.png)
+![](planning/wireframes/new.png)

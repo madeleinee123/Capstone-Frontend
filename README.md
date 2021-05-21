@@ -10,7 +10,10 @@ create todo lists in a way that is stress free. It requires them to think about 
 them by priority. 
 ## Planning
 To see prior planning, take a look at my <a href="https://github.com/madeleinee123/Capstone-Backend#planning">repo for the backend</a>.
-After completing the backend, I needed to make wireframes for the front end. I made a whole bunch and can be found in WIREFRAMES.md.
+After completing the backend, I needed to make wireframes for the front end. I made a whole bunch and can be found in WIREFRAMES.md. I also got to pick a color palette.
+
+
+![](planning/palette.png)
 
 The next step again was user stories on the trello board. Here's a link to the <a href="https://trello.com/b/9CTWcxxz/frontend">frontend Trello board</a>.
 Now I was ready to rumble.
@@ -18,7 +21,15 @@ Now I was ready to rumble.
 The angular app is broken into a series of components and uses routing to navigate between the different pages.  I had a tough time understanding routing but finally got the hang of it. 
 I feel really confident about it after this project.  Another struggle in the project was figuring out how to connect the frontend with the backend. I had a lot of CORS errors but finally managed to
 get everything connected by altering the `SecurityConfiguration` file in my backend.  One of the biggest struggles was the CSS. Everything was constantly wonky, and I was having to find 
-little mistakes all the time.  I eventually started to use Bootstrap and it got so much easier. 
+little mistakes all the time.  I eventually started to use Bootstrap and it got so much easier. Here are some screen shots of my final product!
+
+
+![](planning/website-screen-shots/Home.png)
+
+![](planning/website-screen-shots/Lists.png)
+
+![](planning/website-screen-shots/List.png)
+
 ## In the Future
 As I mentioned the CSS was really tough (but fun) for me.  Right now my app isn't very responsive so in the future I would really like to make it responsive to the screen size.  Additionally,
 there are some features that I wanted to impliment like hovering over a list or task to see their description. 

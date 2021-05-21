@@ -99,3 +99,10 @@ li{
   color: #f8e16c;
   padding: 10px;
 }
+.modal-header, .modal-footer{
+  background-color: #ffc2b4;
+}
+.modal-body{
+  background-color: #fb8f67;
+}
+.modal-title{background-color: transparent;}
