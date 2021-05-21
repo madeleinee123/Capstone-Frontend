@@ -20,8 +20,7 @@ I feel really confident about it after this project.  Another struggle in the pr
 get everything connected by altering the `SecurityConfiguration` file in my backend.  One of the biggest struggles was the CSS. Everything was constantly wonky, and I was having to find 
 little mistakes all the time.  I eventually started to use Bootstrap and it got so much easier. 
 ## In the Future
-As I mentioned the CSS was really tough (but fun) for me.  Right now my app isn't very responsive so in the future I would really like to make it responsive to the screen size.  Additionally,
-there are some features that I wanted to impliment like hovering over a list or task to see their description. 
+As I mentioned the CSS was really tough (but fun) for me.  Right now my app isn't very responsive so in the future I would really like to make it responsive to the screen size.  Additionally,there are some features that I wanted to impliment like hovering over a list or task to see their description as well as notifying the user when they have not successfully made a change and why it was unsuccessful.   
 ## Installation
 1. Fork and clone the repo on to your local machine
 2. Download the Angular CLI with the command `npm install -g @angular/cli`
