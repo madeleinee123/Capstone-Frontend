@@ -15,7 +15,7 @@ export class SignupComponent implements OnInit {
   registerUser(): void {
     const newUser = {userName: this.userName, emailAddress: this.emailAddress, password: this.password};
     this.userService.registerUser(newUser)
-      .subscribe(response => console.log(response), err => console.log(err));
+      .subscribe(response => this.userService.loginUser({email: response.emailAddress, password: this.password}), err => console.log(err));
   }
 
   ngOnInit() {
