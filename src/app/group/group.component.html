@@ -16,10 +16,20 @@
         <h4 class="shadow"> Maybe, if I have time ...</h4>
         <ul>
           <li *ngFor="let task of priority1">
-            <h5 class="task">{{task.title}}</h5>
-            <div class="info">
-              <h6>{{task.dueDate}}</h6>
-              <h6>{{task.consequence}} <button type="button" class="edit" data-toggle="modal" data-target="#editList"><img src="assets/images/pencil.png" style="width:27px;"></button></h6>
+            <div class="card shadow">
+              <div class="card-header">
+                <h5 class="task">{{task.title}}</h5>
+              </div>
+              <div class="card-body info">
+                <h5 class="headings shadow">Due Date:</h5>
+                <h6>{{task.dueDate}}</h6>
+                <h5 class="headings shadow">Consequences:</h5>
+                <h6>{{task.consequence}}</h6>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn delete" (click)="deleteTask(task)" data-dismiss="modal"><img src="assets/images/deleteButton.png" style="width:40px;"></button>
+                <button type="button" class="btn edit" data-toggle="modal" data-target="#editTask"><img src="assets/images/pencil.png" style="width:27px;"></button>
+              </div>
             </div>
           </li>
         </ul>
@@ -30,10 +40,20 @@
         <h4  class="shadow"> More for pleasure than necessity ...</h4>
         <ul>
           <li *ngFor="let task of priority2">
-            <h5 class="task">{{task.title}}</h5>
-            <div class="info">
-              <h6>{{task.dueDate}}</h6>
-              <h6>{{task.consequence}}</h6>
+            <div class="card shadow">
+              <div class="card-header">
+                <h5 class="task">{{task.title}}</h5>
+              </div>
+              <div class="card-body info">
+                <h5 class="headings shadow">Due Date:</h5>
+                <h6>{{task.dueDate}}</h6>
+                <h5 class="headings shadow">Consequences:</h5>
+                <h6>{{task.consequence}}</h6>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn delete" (click)="deleteTask(task)" data-dismiss="modal"><img src="assets/images/deleteButton.png" style="width:40px;"></button>
+                <button type="button" class="btn edit" data-toggle="modal" data-target="#editTask"><img src="assets/images/pencil.png" style="width:27px;"></button>
+              </div>
             </div>
           </li>
         </ul>
@@ -44,10 +64,20 @@
         <h4 class="shadow"> I should do this sooner rather than later ...</h4>
         <ul>
           <li *ngFor="let task of priority3">
-            <h5 class="task">{{task.title}}</h5>
-            <div class="info">
-              <h6>{{task.dueDate}}</h6>
-              <h6>{{task.consequence}}</h6>
+            <div class="card shadow">
+              <div class="card-header">
+                <h5 class="task">{{task.title}}</h5>
+              </div>
+              <div class="card-body info">
+                <h5 class="headings shadow">Due Date:</h5>
+                <h6>{{task.dueDate}}</h6>
+                <h5 class="headings shadow">Consequences:</h5>
+                <h6>{{task.consequence}}</h6>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn delete" (click)="deleteTask(task)" data-dismiss="modal"><img src="assets/images/deleteButton.png" style="width:40px;"></button>
+                <button type="button" class="btn edit" data-toggle="modal" data-target="#editTask"><img src="assets/images/pencil.png" style="width:27px;"></button>
+              </div>
             </div>
           </li>
         </ul>

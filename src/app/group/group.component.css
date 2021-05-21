@@ -47,26 +47,19 @@ h4{
   height: 40px;
 }
 .task{
-  background-image: url("../../assets/images/task.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding: 40px 60px;
+
+  padding: 40px 20px 40px 100px;
   margin: 0;
-  text-align: right;
 }
 ul{
   list-style-type: none;
   padding: 0;
 }
 .info{
-  background-color: #156064;
-  color: #f8e16c;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width:70%;
   padding-top: 10px;
 }
 li{
@@ -75,4 +68,34 @@ li{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.card{
+  background-color: #ffc2b4;
+}
+.card-header, .card-footer, .card-body{
+  border: none;
+  display: flex;
+}
+.card-footer{
+  justify-content: space-between;
+  align-items: center;
+}
+.card-header{
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("../../assets/images/task.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0;
+  text-align: right;
+}
+.card-body{
+  justify-content: center;
+  align-items: flex-start;
+}
+.headings{
+  background-color: #00c49a;
+  color: #f8e16c;
+  padding: 10px;
 }

@@ -81,4 +81,12 @@ export class GroupComponent implements OnInit {
       this.group = response;
     }, err => console.log(err));
   }
+
+  deleteTask(task: any) {
+    this.groupService.deleteTask(this.group, task.id).subscribe(response => {
+      console.log(response);
+      this.ngOnInit()
+    }, err => console.log(err));
+
+  }
 }
