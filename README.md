@@ -6,14 +6,17 @@ and CVS.
 In the project, we were tasked with creating a web application that displayed the culmination of all the skills
 we had learned during the immersive. This frontend was built using the framework Angular. It has been
 deployed to Heroku and it is connected to a backend that was also deployed to heroku.  The app gives users the ability to 
-create todo lists in a way that is stress free. It requires them to think about the item they are adding to their list and catagorize
+create todo lists in a way that is stress free. It requires them to think about the item they are adding to their list and categorize
 them by priority. 
 ## Planning
 To see prior planning, take a look at my <a href="https://github.com/madeleinee123/Capstone-Backend#planning">repo for the backend</a>.
+
 After completing the backend, I needed to make wireframes for the front end. I made a whole bunch and can be found in WIREFRAMES.md. I also got to pick a color palette.
 
 
 ![](planning/palette.png)
+
+After completing the backend, I needed to make wireframes for the front end. I made a whole bunch and can be found in <a href="https://github.com/madeleinee123/Capstone-Frontend/blob/main/WIREFRAMES.md#wireframes">WIREFRAMES.md</a>.
 
 The next step again was user stories on the trello board. Here's a link to the <a href="https://trello.com/b/9CTWcxxz/frontend">frontend Trello board</a>.
 Now I was ready to rumble.
@@ -31,8 +34,7 @@ little mistakes all the time.  I eventually started to use Bootstrap and it got 
 ![](planning/website-screen-shots/List.png)
 
 ## In the Future
-As I mentioned the CSS was really tough (but fun) for me.  Right now my app isn't very responsive so in the future I would really like to make it responsive to the screen size.  Additionally,
-there are some features that I wanted to impliment like hovering over a list or task to see their description. 
+As I mentioned the CSS was really tough (but fun) for me.  Right now my app isn't very responsive so in the future I would really like to make it responsive to the screen size.  Additionally,there are some features that I wanted to impliment like hovering over a list or task to see their description as well as notifying the user when they have not successfully made a change and why it was unsuccessful.   
 ## Installation
 1. Fork and clone the repo on to your local machine
 2. Download the Angular CLI with the command `npm install -g @angular/cli`
