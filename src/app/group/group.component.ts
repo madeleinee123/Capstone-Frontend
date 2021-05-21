@@ -19,6 +19,7 @@ export class GroupComponent implements OnInit {
   priority1 = [];
   priority2 = [];
   priority3 = [];
+  taskId: string;
 
   constructor(private route: ActivatedRoute, private groupService: GroupService) { }
 
@@ -88,5 +89,22 @@ export class GroupComponent implements OnInit {
       this.ngOnInit()
     }, err => console.log(err));
 
+  }
+
+  editTask() {
+    const task = {
+      id: this.taskId,
+      name: this.groupName,
+      description: this.groupDescription,
+      taskList: this.group.taskList,
+      user: this.group.user
+    };
+    this.groupService.editTask(this.group, task).subscribe(response => {
+      console.log(response);
+    }, err => console.log(err));
+  }
+
+  setId(id) {
+    this.taskId=id;
   }
 }
