@@ -1,26 +1,4 @@
-<!--<nav class="navbar">-->
-<!--  <div class="container-fluid">-->
-<!--    <div class="navbar-header">-->
-<!--      <a class="navbar-brand" routerLink="/"><img src="assets/logo.png" alt="logo: world whelmed with a tiny pink heart"></a>-->
-<!--    </div>-->
-<!--    <ul class="nav navbar-nav">-->
-<!--      <li class="active"><a routerLink="/" class="rounded-pill right">Home</a></li>-->
-<!--      <li><a routerLink="/about" class="rounded-pill right">About</a></li>-->
-<!--    </ul>-->
-<!--    <ul class="nav navbar-nav navbar-right">-->
-<!--      <span *ngIf="!this.currentUser">-->
-<!--        <li><a routerLink="/signup" class="rounded-pill">Sign Up</a></li>-->
-<!--        <li><a routerLink="/login" class="rounded-pill">Log In</a></li>-->
-<!--      </span>-->
-<!--      <span *ngIf="this.currentUser">-->
-<!--          <li><a routerLink="/lists" class="rounded-pill">All Lists</a></li>-->
-<!--          <li><a routerLink="/logout" class="rounded-pill">Log Out</a></li>-->
-<!--          <li id="name"><b>Hello, {{this.currentUser}}</b></li>-->
-<!--      </span>-->
-<!--    </ul>-->
-<!--  </div>-->
-<!--</nav>-->
-<nav class="navbar navbar-expand-md fixed-top">
+<nav class="navbar navbar-expand-md sticky-top">
   <a class="navbar-brand" routerLink="/" style="margin-left: 16px;">
     <img src="../assets/images/logo.png" alt="logo: world whelmed with a tiny pink heart" style="width:200px;">
   </a>
@@ -58,6 +36,6 @@
     </ul>
   </div>
 </nav>
-<div class="container-fluid h-100">
+<div class="container">
   <router-outlet></router-outlet>
 </div>
