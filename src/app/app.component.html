@@ -29,8 +29,8 @@
         <li class="nav-item" *ngIf="this.currentUser">
           <a routerLink="/logout" class="nav-link rounded-pill">Log Out</a>
         </li>
-        <li id="name" *ngIf="this.currentUser">
-          <b>Hello, {{this.currentUser}}</b>
+        <li class="nav-item" *ngIf="this.currentUser">
+          <b id="name" class="nav-link">Hello, {{this.currentUser}}</b>
         </li>
       </span>
     </ul>

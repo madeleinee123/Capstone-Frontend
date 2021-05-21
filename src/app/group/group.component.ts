@@ -11,15 +11,32 @@ export class GroupComponent implements OnInit {
   groupId: string;
   group: any;
   taskName = '';
+  dueDate = '';
+  consequence = '';
+  priority: number;
+  priority1 = [];
+  priority2 = [];
+  priority3 = [];
 
   constructor(private route: ActivatedRoute, private groupService: GroupService) { }
 
   createTask(): any {
-    console.log('component: ', this.group, this.taskName);
+    console.log('component: ', this.group, this.taskName, this.priority);
     const newTask = {
-      name: this.taskName
+      title: this.taskName,
+      priority: this.priority,
+      consequence: this.consequence,
+      dueDate: this.dueDate,
+      complete: false
     };
     this.groupService.createTask(this.group, newTask).subscribe(response => {
+      if (this.priority == null || this.priority == 1) {
+        this.priority1.push(response);
+      } else if (this.priority == 2) {
+        this.priority2.push(response);
+      } else {
+        this.priority3.push(response);
+      }
       console.log(response);
     });
   }
@@ -30,8 +47,22 @@ export class GroupComponent implements OnInit {
         this.groupId = params.get('id');
         this.groupService.getGroup(this.groupId).subscribe(response => {
           this.group = response;
-          console.log(this.group);
+          this.sortTasks(this.group.taskList);
+          console.log(this.group.taskList);
         });
       });
+
+  }
+
+  sortTasks(list: any[]): void{
+    for(let i=0; i < list.length; i++) {
+      if (list[i].priority == null || list[i].priority == 1) {
+        this.priority1.push(list[i]);
+      } else if (list[i].priority == 2) {
+        this.priority2.push(list[i]);
+      } else {
+        this.priority3.push(list[i]);
+      }
+    }
   }
 }

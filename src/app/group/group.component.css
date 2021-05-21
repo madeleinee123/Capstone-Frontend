@@ -1,0 +1,10 @@
+#low{
+  border-left-color: #156064;
+  border-left-width: 15px;
+}
+#med{
+  border-left: 20px #fb8f67;
+}
+#high{
+  border-left: 20px #f8e16c
+}
