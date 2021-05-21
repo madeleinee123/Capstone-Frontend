@@ -45,7 +45,7 @@ ul{
 #add{
   background-image: none;
 }
-#submit{
+.rounded-pill, #submit{
   padding:10px;
   background-color: #fb8f67;
   color: inherit;
@@ -53,7 +53,7 @@ ul{
   font-size: 1.5vw;
   border: none;
 }
-#submit:hover{
+.rounded-pill:hover, #submit:hover{
   background-color: #f8e16c;
   color: #fb8f67;
 }
@@ -90,4 +90,9 @@ img{
 #daisy{
   width: 50%;
   height: 50%;
+}
+.card-footer{
+  border:none;
+  display: flex;
+  justify-content: flex-end;
 }

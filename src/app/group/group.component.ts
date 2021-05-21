@@ -68,10 +68,6 @@ export class GroupComponent implements OnInit {
     }
   }
 
-  deleteGroup(): void {
-    this.groupService.deleteGroup(this.group);
-  }
-
   editGroup(): void {
     const group = {
       id: this.group.id,

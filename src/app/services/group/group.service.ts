@@ -58,6 +58,7 @@ export class GroupService {
       .post(`${herokuUrl}/api/groups/${group.id}/tasks`, newTask, requestOptions);
   }
   deleteGroup(group): any {
+    console.log(group);
     const token = localStorage.getItem('token');
     const requestOptions = {
       headers: new HttpHeaders({

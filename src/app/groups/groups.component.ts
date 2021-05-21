@@ -36,4 +36,11 @@ export class GroupsComponent implements OnInit {
       this.lists = [...this.lists, response];
     }, err => console.log(err));
   }
+  deleteGroup(list): void {
+    console.log("here");
+    this.groupService.deleteGroup(list).subscribe(response => {
+      console.log(response);
+      this.ngOnInit()
+    }, err => console.log(err));
+  }
 }

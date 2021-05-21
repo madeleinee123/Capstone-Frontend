@@ -10,6 +10,9 @@
           <div class="card-body">
             <h3 class="card-title shadow"><a routerLink = "{{list.id}}">{{list.name}}</a></h3>
           </div>
+          <div class="card-footer">
+            <button type="button" id="delete" class="btn" (click)="deleteGroup(list)" data-dismiss="modal"><img src="../../assets/images/deleteButton.png"></button>
+          </div>
         </div>
         <div id="add" class="card shadow" style="width: 15rem; height: 15rem;">
           <div class="card-body">
