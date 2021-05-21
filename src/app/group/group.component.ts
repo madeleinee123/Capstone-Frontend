@@ -10,6 +10,8 @@ import {GroupService} from "../services/group/group.service";
 export class GroupComponent implements OnInit {
   groupId: string;
   group: any;
+  groupName: string;
+  groupDescription: string;
   taskName = '';
   dueDate = '';
   consequence = '';
@@ -30,7 +32,7 @@ export class GroupComponent implements OnInit {
       complete: false
     };
     this.groupService.createTask(this.group, newTask).subscribe(response => {
-      if (this.priority == null || this.priority == 1) {
+      if (this.priority == 1) {
         this.priority1.push(response);
       } else if (this.priority == 2) {
         this.priority2.push(response);
@@ -64,5 +66,23 @@ export class GroupComponent implements OnInit {
         this.priority3.push(list[i]);
       }
     }
+  }
+
+  deleteGroup(): void {
+    this.groupService.deleteGroup(this.group);
+  }
+
+  editGroup(): void {
+    const group = {
+      id: this.group.id,
+      name: this.groupName,
+      description: this.groupDescription,
+      taskList: this.group.taskList,
+      user: this.group.user
+    };
+    this.groupService.editGroup(group).subscribe(response => {
+      console.log(response);
+      this.group = response;
+    }, err => console.log(err));
   }
 }

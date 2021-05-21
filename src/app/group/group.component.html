@@ -1,12 +1,19 @@
-<div *ngIf="group">
-  <div class="row" >
-    <h3><span class="display-5">{{group.name}} -</span> {{group.description}}</h3>
+<div class="container-fluid" *ngIf="group">
+  <div class="title" >
+    <h2>
+      <span class="display-5">{{group.name}} -</span> {{group.description}}
+      <button type="button" class="edit" data-toggle="modal" data-target="#editList"><img src="assets/images/pencil.png" style="width:27px;"></button>
+    </h2>
+    <button type="button" class="btn rounded-pill" data-toggle="modal" data-target="#addTask">
+      Add Task
+    </button>
   </div>
   <br>
   <div class="row">
-    <div class="col-md-4">
+    <img src="assets/images/dandylions.png" class="col-1 left">
+    <div class="col-md-3 shadow">
       <div id="low">
-        <h3> Maybe if I have time ...</h3>
+        <h4> Maybe, if I have time ...</h4>
         <ul>
           <li *ngFor="let task of priority1">
             {{task.title}}
@@ -14,9 +21,9 @@
         </ul>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3 shadow">
       <div id="med">
-        <h3> More for pleasure than necessity ...</h3>
+        <h4> More for pleasure than necessity ...</h4>
         <ul>
           <li *ngFor="let task of priority2">
             {{task.title}}
@@ -24,9 +31,9 @@
         </ul>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3 shadow">
       <div id="high">
-        <h3> I should do this sooner rather than later ...</h3>
+        <h4> I should do this sooner rather than later ...</h4>
         <ul>
           <li *ngFor="let task of priority3">
             {{task.title}}
@@ -34,6 +41,7 @@
         </ul>
       </div>
     </div>
+    <img src="assets/images/dandylions.png" class="col-1">
   </div>
 <!--  <ul>-->
 <!--    <li *ngFor="let task of group.taskList">-->
@@ -41,11 +49,7 @@
 <!--      <button (click)="deleteTask(task)">delete</button>-->
 <!--    </li>-->
 <!--  </ul>-->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    Open modal
-  </button>
-
-  <div class="modal fade" id="myModal">
+  <div class="modal fade" id="addTask">
     <div class="modal-dialog">
       <div class="modal-content">
 
@@ -93,6 +97,40 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           <button type="button" class="btn btn-success" data-dismiss="modal" (click)="createTask()">Create</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="editList">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Edit List</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">List: </label>
+              <input [(ngModel)]="groupName" id="name" name="groupName" type="text" placeholder="{{group.name}}" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="description">Description: </label>
+              <input [(ngModel)]="groupDescription" id="description" name="groupDescription" type="text" placeholder="{{group.description}}" class="form-control"/>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary" (click)="deleteGroup()" data-dismiss="modal">Delete</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal" (click)="editGroup()">Save</button>
         </div>
 
       </div>
