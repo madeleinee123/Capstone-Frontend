@@ -1,11 +1,8 @@
 form{
-  height: 100vh;
-  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  font-size: 1.5vw;
 }
 .rounded-pill{
   background-color: #fb8f67;
@@ -17,4 +14,26 @@ form{
   background-color: #f8e16c;
   color: #fb8f67;
 }
-
+.bg-image{
+  background-image: url('../../assets/images/login.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  background-size: contain;
+  width: 40vw;
+  height: 40vw;
+}
+.container-fluid{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5vw;
+  margin-top: 100px;
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
