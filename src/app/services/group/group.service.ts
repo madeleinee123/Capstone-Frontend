@@ -87,7 +87,7 @@ export class GroupService {
       }),
     };
     return this.http
-      .post(`${herokuUrl}/api/groups/${group.id}/tasks/${newTask.id}`, newTask, requestOptions);
+      .put(`${herokuUrl}/api/groups/${group.id}/tasks/${newTask.id}`, newTask, requestOptions);
   }
   editGroup(group): any {
     console.log('service: ', group);
@@ -98,7 +98,7 @@ export class GroupService {
       }),
     };
     return this.http
-      .post(`${herokuUrl}/api/groups/${group.id}`, group, requestOptions);
+      .put(`${herokuUrl}/api/groups/${group.id}`, group, requestOptions);
   }
   completeTask(group, taskId): any {
     console.log('service: ', group, taskId);
